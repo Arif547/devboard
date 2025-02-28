@@ -14,7 +14,7 @@ document.getElementById("color-chnage-btn").addEventListener('click', function (
 
 });
 
-// Current Date
+// Current Date & Time
 const currentDateElement = document.getElementById('current-date');
 const currentDate = new Date();
 const options = { year: 'numeric', month: 'short', day: 'numeric' };
@@ -25,6 +25,8 @@ const currentDay = document.getElementById('current-day');
 const optionsDay = { weekday: 'short' };
 const day = currentDate.toLocaleDateString("en-us", optionsDay);
 currentDay.innerText = day + ",";
+
+const currentTime = currentDate.toLocaleTimeString("en-US");
 
 
 // Button 
@@ -54,6 +56,9 @@ for (let i = 0; i < completeBtn.length; i++) {
 
     })
 }
+
+
+
 
 
 
