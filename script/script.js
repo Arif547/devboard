@@ -10,6 +10,7 @@ document.getElementById("color-chnage-btn").addEventListener('click', function (
 
     bodyColor.classList.remove(bgColors[currentBgColor]);
     currentBgColor = (currentBgColor + 1) % bgColors.length;
+    console.log(currentBgColor);
     bodyColor.classList.add(bgColors[currentBgColor]);
 
 });
@@ -19,7 +20,7 @@ let currentDateElement = document.getElementById('current-date');
 let currentDate = new Date();
 let options = { year: 'numeric', month: 'short', day: 'numeric' };
 let date = currentDate.toLocaleDateString('en-US', options);
-currentDateElement.textContent = date;
+currentDateElement.innerText = date;
 
 let currentDay = document.getElementById('current-day');
 let optionsDay = { weekday: 'short' };
@@ -42,6 +43,7 @@ for (let i = 0; i < completeBtn.length; i++) {
         event.target.classList.remove('cursor-pointer', "hover:bg-primary")
         event.target.classList.add('cursor-not-allowed', 'opacity-20');
         event.target.disabled = true;
+        // event.target.setAttribute("disabled", "true");
 
         let count = parseInt(taskCount.innerText);
         count = count - 1;
@@ -53,7 +55,7 @@ for (let i = 0; i < completeBtn.length; i++) {
         countNumber = countNumber + 1;
         countTask.innerText = countNumber.toString().padStart(2, '0');
 
-        alert('Task added');
+        alert('Task Complete Successfully');
 
 
 
@@ -69,7 +71,7 @@ for (let i = 0; i < completeBtn.length; i++) {
         const logContainer = document.getElementById('log-container');
         const logText = document.createElement('div');
         logText.innerHTML = `
-        <p class="p-3 bg-bg rounded-lg mb-5">You have Complete ${titleText} at ${formattedTime}</p>
+        <p class="p-3 bg-bg rounded-lg mb-5">You have Complete the task ${titleText} at ${formattedTime}</p>
 
         `
         logContainer.appendChild(logText);
@@ -81,11 +83,3 @@ for (let i = 0; i < completeBtn.length; i++) {
 document.getElementById('clear-history').addEventListener('click', function () {
     document.getElementById('log-container').innerHTML = "";
 })
-
-
-
-
-
-
-
-

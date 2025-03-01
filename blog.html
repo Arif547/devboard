@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <title>Blog</title>
+    <style type="text/tailwindcss">
+        @theme {
+            --color-primary: #00303C;
+            --color-bg: #F4F7FF;
+            --color-accent: #3752FD;
+            --font-poppins: "Poppins", sans-serif;
+              
+            }
+          </style>
+
+</head>
+
+<body class="font-poppins pt-6 bg-bg text-primary px-5 py-[60px]">
+    <header class="mb-5">
+        <div class="max-w-[1536px] mx-auto flex justify-between items-center bg-white p-6 rounded-2xl">
+            <div class="flex gap-3 items-center">
+                <img src="./assets/logo.png" alt="DevBoard" width="51px">
+                <h1 class="text-4xl text-primary font-light">Dev<span class="font-bold">Board</span></h1>
+            </div>
+            <a href="./index.html">
+                <button
+                    class="complete-btn bg-accent text-white rounded-lg hover:bg-primary cursor-pointer py-[10px] px-5 text-base font-medium tracking-wide"
+                    type="button"> Back To Home</button>
+            </a>
+
+        </div>
+    </header>
+    <main class="max-w-[1536px] mx-auto space-y-5">
+        <h2 class="text-center title text-2xl font-bold tracking-wide text-primary">Blogs</h2>
+
+        <div class="bg-white rounded-2xl">
+            <h2 class="p-5 text-xl font-semibold">Question-1: What are the different ways to select an element in the
+                DOM?
+            </h2>
+            <p class="p-5 border-dashed border-t border-gray-200">There is many way to select element in the dom.
+                getElementById, getElementsByClassName, getElementsByTagName, querySelector, querySelectorAll,
+                getElementsByName. To Get select html id getElementById is very handy. also select single class most of
+                time use getElementsByClassName. </p>
+        </div>
+
+        <div class="bg-white rounded-2xl">
+            <h2 class="p-5 text-xl font-semibold">Question-2: What is the difference between innerHTML, innerText, and
+                textContent ?
+            </h2>
+            <p class="p-5 border-dashed border-t border-gray-200">InnerHTML use for get or set html tag. like p tag,
+                div, heading tag etc. innerText is use for to get or set on the html tag content. and textContent like
+                innerText but its ignoring css class. if any content is hidden it can get or set those content. </p>
+        </div>
+
+        <div class="bg-white rounded-2xl">
+            <h2 class="p-5 text-xl font-semibold">Question-3: What is event delegation in the DOM?
+            </h2>
+            <p class="p-5 border-dashed border-t border-gray-200">Event is a powerful technique in the DOM. it allows to
+                handle events more efficiently. when multiple elements have it help to handle to run that individual
+                topic you click</p>
+        </div>
+
+        <div class="bg-white rounded-2xl">
+            <h2 class="p-5 text-xl font-semibold">Question-4: What is event bubbling in the DOM?
+            </h2>
+            <p class="p-5 border-dashed border-t border-gray-200">Event bubbling is a key concept in the DOM. The target
+                element up to the root element during this phase event Listers attached to ancestor elements are
+                executed.</p>
+        </div>
+
+        <div class="bg-white rounded-2xl">
+            <h2 class="p-5 text-xl font-semibold">Question-5: How do you create, add, and remove elements using
+                JavaScript?
+            </h2>
+            <p class="p-5 border-dashed border-t border-gray-200"> use for creat html tag <code>const
+                newDiv = document.createElement('div'). container.appendChild(newDiv); </code> appendChild use for
+                executed that div tag on site. Using append or prepend the new div element to the container. removeChild
+                Remove the element from its parent.</p>
+        </div>
+    </main>
+</body>
+
+</html>
