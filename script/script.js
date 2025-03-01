@@ -26,7 +26,6 @@ const optionsDay = { weekday: 'short' };
 const day = currentDate.toLocaleDateString("en-us", optionsDay);
 currentDay.innerText = day + ",";
 
-const currentTime = currentDate.toLocaleTimeString("en-US");
 
 
 // Button 
@@ -48,11 +47,31 @@ for (let i = 0; i < completeBtn.length; i++) {
         count = count - 1;
         taskCount.innerText = count.toString().padStart(2, '0');
 
-        // total Count
+        // Total Count
         const countTask = document.getElementById('count-task');
         let countNumber = parseInt(countTask.innerText);
         countNumber = countNumber + 1;
         countTask.innerText = countNumber.toString().padStart(2, '0');
+
+        alert('Task added');
+
+
+
+        // log-container
+
+        const cardBox = completeBtn[i].closest('.card-box');
+        const titleText = cardBox.querySelector('.title').innerText;
+
+        const currentTime = currentDate.toLocaleTimeString("en-US");
+
+        const logContainer = document.getElementById('log-container');
+        const logText = document.createElement('div');
+        logText.innerHTML = `
+        <p class="p-3 bg-bg rounded-lg mb-5">You have Complete ${titleText} at ${currentTime}</p>
+
+        `
+        logContainer.appendChild(logText);
+
 
     })
 }
