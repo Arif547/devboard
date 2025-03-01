@@ -78,6 +78,10 @@ for (let i = 0; i < completeBtn.length; i++) {
     })
 }
 
+document.getElementById('clear-history').addEventListener('click', function () {
+    document.getElementById('log-container').innerHTML = "";
+})
+
 
 
 
