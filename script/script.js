@@ -15,15 +15,15 @@ document.getElementById("color-chnage-btn").addEventListener('click', function (
 });
 
 // Current Date & Time
-const currentDateElement = document.getElementById('current-date');
-const currentDate = new Date();
-const options = { year: 'numeric', month: 'short', day: 'numeric' };
-const date = currentDate.toLocaleDateString('en-US', options);
+let currentDateElement = document.getElementById('current-date');
+let currentDate = new Date();
+let options = { year: 'numeric', month: 'short', day: 'numeric' };
+let date = currentDate.toLocaleDateString('en-US', options);
 currentDateElement.textContent = date;
 
-const currentDay = document.getElementById('current-day');
-const optionsDay = { weekday: 'short' };
-const day = currentDate.toLocaleDateString("en-us", optionsDay);
+let currentDay = document.getElementById('current-day');
+let optionsDay = { weekday: 'short' };
+let day = currentDate.toLocaleDateString("en-us", optionsDay);
 currentDay.innerText = day + ",";
 
 
@@ -62,12 +62,14 @@ for (let i = 0; i < completeBtn.length; i++) {
         const cardBox = completeBtn[i].closest('.card-box');
         const titleText = cardBox.querySelector('.title').innerText;
 
-        const currentTime = currentDate.toLocaleTimeString("en-US");
+        // let currentTime = currentDate.toLocaleTimeString("en-US");
+        let currentTime = new Date();
+        let formattedTime = currentTime.toLocaleTimeString("en-US");
 
         const logContainer = document.getElementById('log-container');
         const logText = document.createElement('div');
         logText.innerHTML = `
-        <p class="p-3 bg-bg rounded-lg mb-5">You have Complete ${titleText} at ${currentTime}</p>
+        <p class="p-3 bg-bg rounded-lg mb-5">You have Complete ${titleText} at ${formattedTime}</p>
 
         `
         logContainer.appendChild(logText);
