@@ -10,7 +10,6 @@ document.getElementById("color-chnage-btn").addEventListener('click', function (
 
     bodyColor.classList.remove(bgColors[currentBgColor]);
     currentBgColor = (currentBgColor + 1) % bgColors.length;
-    console.log(currentBgColor);
     bodyColor.classList.add(bgColors[currentBgColor]);
 
 });
