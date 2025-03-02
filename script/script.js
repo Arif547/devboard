@@ -56,6 +56,10 @@ for (let i = 0; i < completeBtn.length; i++) {
 
         alert('Task Complete Successfully');
 
+        if (count == 0) {
+            alert("Congrats!!! You have complete all the current task.");
+        }
+
 
 
         // log-container
