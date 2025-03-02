@@ -6,7 +6,7 @@ let currentBgColor = 0;
 const bodyColor = document.getElementById("bg-color");
 
 
-document.getElementById("color-chnage-btn").addEventListener('click', function () {
+document.getElementById("color-change-btn").addEventListener('click', function () {
 
     bodyColor.classList.remove(bgColors[currentBgColor]);
     currentBgColor = (currentBgColor + 1) % bgColors.length;
@@ -60,10 +60,13 @@ for (let i = 0; i < completeBtn.length; i++) {
 
         // log-container
 
-        const cardBox = completeBtn[i].closest('.card-box');
-        const titleText = cardBox.querySelector('.title').innerText;
+        // const cardBox = completeBtn[i].closest('.card-box');
+        // const titleText = cardBox.querySelector('.title').innerText;
 
-        // let currentTime = currentDate.toLocaleTimeString("en-US");
+        const buttonParent = event.target.parentNode;
+        const mainParent = buttonParent.parentNode;
+        const titleText = mainParent.querySelector(".title").innerText;
+
         let currentTime = new Date();
         let formattedTime = currentTime.toLocaleTimeString("en-US");
 
