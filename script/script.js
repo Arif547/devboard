@@ -1,6 +1,6 @@
 // BG Color Change
 
-const bgColors = ["bg-bg", "bg-slate-200", "bg-green-200", 'bg-red-200', 'bg-green-200', "bg-blue-200", "bg-black"]
+const bgColors = ["bg-bg", "bg-slate-200", "bg-green-200", 'bg-red-200', 'bg-green-200', "bg-blue-200", "bg-black", "bg-yellow-200", "bg-stone-200"]
 let currentBgColor = 0;
 
 const bodyColor = document.getElementById("bg-color");
